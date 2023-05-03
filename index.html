@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="blur-box">
+        <div id="password-box">
+            <div class="password">
+                <h2>Password Generator</h2><br>
+            </div>
+            <span>    
+                <p class="Select-length">Select the Length of Password :</p>
+            </span>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="10" value="5" class="slider" id="Eslider"  onclick="displayValue()">
+            </div>
+            <div id="value" class="slider_value">Length =</div>
+            <div>
+                <form>
+                    <input type="checkbox" value="1" class="checkboxs" onclick="checkboxChecker()" id="symbols"> Add Symbols<br>
+                    <input type="checkbox" value="2" class="checkboxs" onclick="checkboxChecker()" id="numbers"> Add Numbers<br>
+                    <input type="checkbox" value="3" class="checkboxs" onclick="checkboxChecker()" id="capitals"> Add Capitals<br>
+                </form>
+            </div>
+            <div>
+                <h4>Enter Word : <input type="text" placeholder="Keyword" value="" class="keyword" id="keyword"></h4>
+            </div>
+            <input class="buttonPassword" value="Generate Password" type="button" onclick="generatePassword()">
+            <div>
+                <h3 id="finalPassword">Password : </h3>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
